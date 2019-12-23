@@ -1,0 +1,16 @@
+{
+    "name": "Blank Template Chrome Extension",
+    "version": "1.0",
+    "description": "Put your description here...",
+    "manifest_version": 2,
+    "browser_action": {
+        "default_icon": "assets/icon.png",
+        "default_title": "Extension",
+        "default_popup": "src/html/popup.html"
+    },
+    "permissions": ["storage", "unlimitedStorage", "tabs", "<all_urls>"],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["src/js/content.js"]
+    }]
+}
